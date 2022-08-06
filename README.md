@@ -6,58 +6,75 @@ Open a terminal window and install the dependent packages. Enter the following c
 ```
 cd ~/catkin_ws/src/
 ```
+
 ```
 git clone https://github.com/ROBOTIS-GIT/turtlebot3_msgs.git
 ```
+
 ```
 git clone https://github.com/ROBOTIS-GIT/turtlebot3.git
 ```
+
 ```
 cd ~/catkin_ws && catkin_make
 ```
+
 Type this command to open the bashrc file to add the burger model.
 ```
 gedit ~/.bashrc
 ```
+
 Add this line at the bottom of the file:
+
 ```
 export TURTLEBOT3_MODEL=burger
 ```
+
 Now reload .bashrc so that you do not have to log out and log back in.
 
 ```
 source ~/.bashrc
 ```
+
 Now, we need to download the TurtleBot3 simulation files.
+
 ```
 cd ~/catkin_ws/src/
 ```
+
 ```
 git clone https://github.com/ROBOTIS-GIT/turtlebot3_simulations.git
 ```
+
 ```
 cd ~/catkin_ws && catkin_make
 ```
+
 ## Simulate TurtleBot3 Using Gazebo
 To use Gazebo to do the TurtleBot3 simulation Enter the following commands.
+
 ```
 Simulate TurtleBot3 Using Gazebo
 ```
+
 ## Simulating SLAM With TurtleBot3
 Install the SLAM module in a new terminal window.
 
 ```
 sudo apt install ros-noetic-slam-gmapping
 ```
+
 Start Gazebo in a new terminal window.
 
 ```
 roslaunch turtlebot3_gazebo turtlebot3_world.launch
+
 ```
 Start SLAM in a new terminal tab.
 
 ```
 roslaunch turtlebot3_slam turtlebot3_slam.launch slam_methods:=gmapping
+
 ```
 Start autonomous navigation in a new terminal tab:
 
